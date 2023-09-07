@@ -58,6 +58,7 @@ Specifications
    -  1x RC port (suport sbus, ppm and dsm)
 
 -  **Other**
+
    -  Weight 38g
    -  Size 58mm x 38mm x 16.8mm
 
@@ -223,7 +224,7 @@ RC Input
 
 The remote control signal should be connected to the “RC IN” pin, at one side of the servo channels.
 
-This signal pin supports two types of remote control signal inputs, SBUS and PPM signals.
+This signal pin supports two types of remote control signal inputs, SBUS PPM and DSM signals.
 
 
 PWM Output
