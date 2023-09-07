@@ -1,61 +1,42 @@
-.. _common-holybro-kakuteh7-v2:
+.. _common-yjuav-a6se:
 
 ====================
-Holybro Kakute H7 V2
+YJUAV A6SE
 ====================
 
-.. image:: ../../../images/KakuteH7_Top.png
-    :target: ../_images/KakuteH7_Top.png
+.. image:: ../../../images/yjuav-autopilot/a6se/a6se_1.jpg
+    :target: ../_images/yjuav-autopilot/a6se/a6se_1.jpg
     :width: 50%
 
-.. image:: ../../../images/KakuteH7_Bottom.png
-    :target: ../_images/KakuteH7_Bottom.png
+.. image:: ../../../images/yjuav-autopilot/a6se/a6se_2.jpg
+    :target: ../_images/yjuav-autopilot/a6se/a6se_2.jpg
     :width: 50%
 
-*above image and some content courtesy of* `Holybro <http://www.holybro.com>`__
 
-Where to Buy
-============
-
-- Available from many retailers including `Holybro <https://shop.holybro.com/kakute-h7-v2_p1344.html>`__
-
-
-Specifications
+Features
 ==============
 
--  **Processor**
-
-   -  STM32H743 32-bit processor 
-   -  AT7456E OSD
-   -  128 MByte flash for logging
-
--  **Sensors**
-
-   -  BMI270 IMU (accel and gyro only, no compass)
-   -  BMP280 barometer
-
--  **Power**
-
-   -  2S  - 8S Lipo input voltage with voltage monitoring
-   -  9V, 1.5A BEC for powering Video Transmitter
-
--  **Interfaces**
-
-   -  9x PWM outputs (9th pwm output is for NeoPixel LED string via the LED pad)
-   -  1x RC input
-   -  6x UARTs/serial for GPS and other peripherals
-   -  1x I2C port for external compass
-   -  USB-C port
-   -  Switchable VTX power
-   -  All UARTS support hardware inversion. SBUS, SmartPort, and other inverted protocols work on any UART without "uninvert hack"
-   -  External current monitor input
-
+-  **STM32H750 microcontroller**
+-  **Onboard Flash: 128Mbits/16Mbytes**
+-  **Two IMUs: ICM42688, ICM42688**
+-  **Internal ITS8310 I2C magnetometer**
+-  **Internal DPS310 SPI barometer**
+-  **Internal RGB LED**
+-  **microSD card slot port**
+-  **1 analog power ports**
+-  **5 UARTs and 1 USB ports**
+-  **3 I2C and 2 CAN ports**
+-  **11 PWM output ports**
+-  **Safety switch port**
+-  **External SPI port**
+-  **Buzzer port**
+-  **RC IN port**
 
 Pinout
 ======
 
-.. image:: ../../../images/holybro-kakuteh7V2-pinout.jpg
-    :target: ../_images/holybro-kakuteh7V2-pinout.jpg
+.. image:: ../../../images/yjuav-autopilot/a6se/a6se_3.jpg
+    :target: ../_images/yjuav-autopilot/a6se/a6se_3.jpg
 
 =============     =================================================
 Pin               Function
