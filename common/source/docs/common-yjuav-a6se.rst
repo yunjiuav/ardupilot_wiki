@@ -4,6 +4,8 @@
 YJUAV A6SE
 ====================
 
+Overview
+==============
 .. image:: ../../../images/yjuav-autopilot/a6se/a6se_1.jpg
     :target: ../_images/yjuav-autopilot/a6se/a6se_1.jpg
     :width: 50%
@@ -12,25 +14,52 @@ YJUAV A6SE
     :target: ../_images/yjuav-autopilot/a6se/a6se_2.jpg
     :width: 50%
 
+The A6SE is a high-performance and cost-effective flight control product, with a small size, light weight, and easy installation.
+The A6SE flight controller is manufactured and sold by `YJUAV <http://www.yjuav.net>`__.
 
-Features
+Where to Buy
+============
+
+Order `here <https://yjuav.taobao.com/>`__.
+
+
+Specifications
 ==============
 
--  **STM32H750 microcontroller**
--  **Onboard Flash: 128Mbits/16Mbytes**
--  **Two IMUs: ICM42688, ICM42688**
--  **Internal ITS8310 I2C magnetometer**
--  **Internal DPS310 SPI barometer**
--  **Internal RGB LED**
--  **microSD card slot port**
--  **1 analog power ports**
--  **5 UARTs and 1 USB ports**
--  **3 I2C and 2 CAN ports**
--  **11 PWM output ports**
--  **Safety switch port**
--  **External SPI port**
--  **Buzzer port**
--  **RC IN port**
+-  **Processor**
+
+   -  STM32H750 32-bit processor
+   -  480 Mhz/ 1 MB RAM
+   -  16MB Onboard Flash
+   -  32KB F-RAM nonvolatile memory
+
+-  **Sensors**
+
+   -  Two InvenSense ICM42688 accelerometer / gyroscope
+   -  DPS310 barometer
+   -  IST8310 magnetometer
+
+-  **Power**
+
+   -  Power supply: 4.5~5.5V
+   -  Dual redundancy power supply
+      (POWER ADC port and USB port)
+
+-  **Interfaces**
+
+   -  11x PWM servo outputs
+   -  5x Uart ports
+   -  3x I2C ports
+   -  2x CAN ports
+   -  1x ADC port
+   -  1x microSD port
+   -  1x TypeC USB port
+   -  1x Analog battery monitor port
+   -  1x RC port (suport sbus, ppm and dsm)
+
+-  **Other**
+   -  Weight 38g
+   -  Size 58mm x 38mm x 16.8mm
 
 Pinout
 ======
@@ -38,181 +67,221 @@ Pinout
 .. image:: ../../../images/yjuav-autopilot/a6se/a6se_3.jpg
     :target: ../_images/yjuav-autopilot/a6se/a6se_3.jpg
 
-=============     =================================================
-Pin               Function
-=============     =================================================
-VTX+              9V for HD System or other VTX, by default ON/OFF is
-                  controlled by RELAY2. See :ref:`common-relay`
-                  Can be controlled by RELAY2
-SDA, SCL          I2C connection (for peripherals)
-5v                5v output (1.5A max)
-3v3               3.3v output (0.25A max)
-Vi                Video input from FPV camera
-Vo                Video output to video transmitter
-CAM               To camera OSD control
-G or GND          Ground
-RSI               Analog RSSI (0-3.3v) input from receiver
-R3, T3            UART3 RX and TX
-R4, T4            UART4 RX and TX
-R6, T6            UART6 RX and TX (UART6 RX is also located in the
-                  GH plug)
-LED               WS2182 addressable LED signal wire
-Z-                Piezo buzzer negative leg
-=============     =================================================
-
-ESC Port 1
+POWER ADC
 ----------
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 VCC_IN               +5V
+2                 VCC_IN               +5V
+3                 BAT_CRRENT_ADC       +3.3V
+4                 BAT_VOLTAGE_ADC      +3.3V
+5                 GND                  GND
+6                 GND                  GND
+=============     ================     =============
 
-=============     =================================================
-Pin               Function
-=============     =================================================
-B+                Battery positive voltage (2S-8S)
-R7                UART7 RX
-GND               Ground
-CURRENT           CURRENT
-M1                Motor signal output 1
-M2                Motor signal output 2
-M3                Motor signal output 3
-M4                Motor signal output 4
-=============     =================================================
-
-ESC Port 2
+TELEM1&TELEM2
 ----------
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 VCC                  +5V
+2                 UART_TX              +3.3V
+3                 UART_RX              +3.3V
+4                 CTS                  +3.3V
+5                 RTS                  +3.3V
+6                 GND                  GND
+=============     ================     =============
 
-=============     =================================================
-Pin               Function
-=============     =================================================
-B+                Battery positive voltage (2S-8S)
-R7                UART7 RX
-GND               Ground
-CURRENT           CURRENT
-M5                Motor signal output 5
-M6                Motor signal output 6
-M7                Motor signal output 7
-M8                Motor signal output 8
-=============     =================================================
-
-VTX Port
+ADC
 --------
-=============     =================================================
-Pin               Function
-=============     =================================================
-Vtx+              9V for HD System or other VTX, by default ON/OFF is
-                  controlled by RELAY2. See :ref:`common-relay`
-G                 Ground
-T1                UART1 TX
-R1                UART1 RX
-G                 Ground
-R6                UART6 RX
-=============     =================================================
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 VCC                  +5V
+2                 ADC_3V3              +3.3V
+3                 ADC_6V6              +6.6V
+4                 GND                  GND
+=============     ================     =============
+
+SPI
+----------
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 VCC                  +5V
+2                 SPI_SCK              +3.3V
+3                 SPI_MISO             +3.3V
+4                 SPI_MOSI             +3.3V
+5                 SPI_CS               +3.3V
+6                 GND                  GND
+=============     ================     =============
+
+I2C
+--------
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 VCC                  +5V
+2                 I2C_SCL              +3.3V
+3                 I2C_SDA              +3.3V
+4                 GND                  GND
+=============     ================     =============
+
+CAN1&CAN2
+--------
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 VCC                  +5V
+2                 CAN_P                +3.3V
+3                 CAN_N                +3.3V
+4                 GND                  GND
+=============     ================     =============
+
+GPS1
+----------
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 VCC                  +5V
+2                 UART_TX              +3.3V
+3                 UART_RX              +3.3V
+4                 I2C_SCL              +3.3V
+5                 I2C_SDA              +3.3V
+6                 GND                  GND
+=============     ================     =============
+
+GPS2&SAFETY
+----------
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 VCC                  +5V
+2                 UART_TX              +3.3V
+3                 UART_RX              +3.3V
+4                 I2C_SCL              +3.3V
+5                 I2C_SDA              +3.3V
+6                 SAFETY_SW            +3.3V
+7                 SAFETY_SW_LED        +3.3V
+8                 3V3_OUT              +3.3V
+9                 BUZZER               +3.3V
+10                GND                  GND
+=============     ================     =============
+
+DEBUG
+----------
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 VCC                  +5V
+2                 TX                   +3.3V
+3                 RX                   +3.3V
+4                 SWDIO                +3.3V
+5                 SWCLK                +3.3V
+6                 GND                  GND
+=============     ================     =============
+
+SAFETY
+----------
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 3V3_OUT              +3.3V
+2                 SAFETY_SW            +3.3V
+3                 SAFETY_SW_LED        +3.3V
+4                 SBUS_OUT             +3.3V
+5                 RSSI                 +3.3V
+6                 GND                  GND
+=============     ================     =============
+
+USB EX
+--------
+=============     ================     =============
+Pin               Signal               Volt
+=============     ================     =============
+1                 VCC_IN               +5V
+2                 DM                   +3.3V
+3                 DP                   +3.3V
+4                 GND                  GND
+=============     ================     =============
 
 UART Mapping
 ============
 
-The UARTs are marked Rn and Tn in the above pinouts. The Rn pin is the
-receive pin for UARTn. The Tn pin is the transmit pin for UARTn.
-
-   -  SERIAL0 -> USB
-   -  SERIAL1 -> UART1 (Telem1) DMA-enabled
-   -  SERIAL2 -> not available externally, internally connected to currently unsupported BT-LE module
-   -  SERIAL3 -> UART3 (SmartAudio VTX protocol by default)
-   -  SERIAL4 -> UART4 (GPS) DMA-enabled
-   -  SERIAL5 -> not available
-   -  SERIAL6 -> UART6 (Setup for serial RX Protocol SBUS by default) DMA-enabled
-   -  SERIAL7 -> UART7 (RX7 only available, normally used for ESC telemetry protocol by default)
-
-The SERIAL7 port (UART7) is normally for ESC telemetry, and has an R7 pin on
-both of the ESC connectors.
-
-Any UART may be re-tasked by changing its protocol parameter.
-
-Copter Default Frame Type
-=========================
-
-For Copter firmware the FRAME_TYPE is already defaulted to type "12" (BetaFlight X) allowing existing BetaFlight configurations with ESCs attached to have the correct motor ordering without changes to the FRAME_TYPE and FRAME_CLASS parameters or ESC wiring.
+- SERIAL0 -> USB (OTG1)
+- SERIAL1 -> USART1 (Telem1)
+- SERIAL2 -> USART6 (Telem2)
+- SERIAL3 -> USART3 (GPS1), NODMA
+- SERIAL4 -> USART2 (GPS2), NODMA
+- SERIAL5 -> UART8 (SBUS)
+- SERIAL6 -> UART7 (Debug), NODMA
+- SERIAL7 -> USB2 (OTG2)
 
 RC Input
 ========
 
-RC input is configured on the R6 (UART6_RX) pin. It supports all RC protocols except PPM. See :ref:`common-rc-systems` for details for a specific RC system. :ref:`SERIAL6_PROTOCOL<SERIAL6_PROTOCOL>` is set to "23", by default, to enable this.
+The remote control signal should be connected to the “RC IN” pin, at one side of the servo channels.
 
-- SBUS/DSM/SRXL connects to the R6 pin.
+This signal pin supports two types of remote control signal inputs, SBUS and PPM signals.
 
-- FPort requires connection to T6 and :ref:`SERIAL6_OPTIONS<SERIAL6_OPTIONS>` be set to "7".
-
-- CRSF also requires a T6 connection, in addition to R6, and automatically provides telemetry. Set :ref:`SERIAL6_OPTIONS<SERIAL6_OPTIONS>` to "0".
-
-- SRXL2 requires a connecton to T6 and automatically provides telemetry.  Set :ref:`SERIAL6_OPTIONS<SERIAL6_OPTIONS>` to "4".
-
-Any UART can be used for RC system connections in ArduPilot also, and is compatible with all protocols except PPM. See :ref:`common-rc-systems` for details.
-
-FrSky Telemetry
-===============
-
-FrSky Telemetry is supported using the Tx pin of any UART. You need to set the following parameters to enable support for FrSky S.PORT (example shows SERIAL2).
-
-  - :ref:`SERIAL2_PROTOCOL<SERIAL2_PROTOCOL>` 10
-  - :ref:`SERIAL2_OPTIONS<SERIAL2_OPTIONS>` 7
-
-OSD Support
-===========
-
-The KakuteH7  supports OSD using :ref:`OSD_TYPE<OSD_TYPE>` 1 (MAX7456 driver). The defaults are also setup to allow DJI Goggle OSD support on UART1.
 
 PWM Output
 ==========
 
-The KakuteH7 supports up to 8 PWM outputs. Outputs are available via two JST-SH connectors. All 8 outputs support DShot and bi-directional DShot, as well as all PWM types.
+The A6SE supports up to 11 PWM outputs,support all PWM protocols as well as DShot. All 11 PWM outputs have GND on the bottom row, 5V on the middle row and signal on the top row.
 
-The PWM is in 3 groups:
+The 11 PWM outputs are in 3 groups:
 
- - PWM 1, 2 in group1
- - PWM 3, 4 in group2
- - PWM 5, 6 in group3
- - PWM 7, 8 in group4
- - PWM 9 (LED) in group5
+- PWM 1, 2, 3 and 4 in group1
+- PWM 5, 6, 7 and 8 in group2
+- PWM 9, 10, 11 in group3
 
-Channels within the same group need to use the same output rate, whether PWM or Dshot. If
-any channel in a group uses DShot then all channels in the group need
-to use DShot.
+Channels 1-8 support bi-directional Dshot.
+Channels within the same group need to use the same output rate. If any channel in a group uses DShot, then all channels in that group need to use DShot.
 
 LED Output
 ==========
 
-The LED output is configured by default to support :ref:`NeoPixel LED strings<common-serial-led-neopixel>`.
+All 11 PWM channels can be used for GPIO functions (relays, buttons, RPM etc).
 
-Battery Monitoring
+The pin numbers for these PWM channels in ArduPilot are shown below:
+
+=============     ======     =============     ======
+PWM Channels      Pin        PWM Channels      Pin
+=============     ======     =============     ======
+PWM1              50         PWM8              57
+PWM2              51         PWM9              58
+PWM3              52         PWM10             59
+PWM4              53         PWM11             60
+PWM5              54
+PWM6              55
+PWM7              56
+=============     ======     =============     ======
+
+Analog inputs
 ==================
 
-The board has a built-in voltage sensor via the B+ pin, but no internal current sensor. An external current sensor can be connected to the CUR pin. Default parameters for both internal voltage and external current monitoring are set by default to the below for use with any Holybro Tekko32 F4 4in1 ESC.
+The A6SE flight controller has 5 analog inputs
 
-The correct battery setting parameters are:
+- ADC Pin4   -> Battery Current 
+- ADC Pin2   -> Battery Voltage 
+- ADC Pin8   -> ADC 3V3 Sense
+- ADC Pin10  -> ADC 6V6 Sense
+- ADC Pin11  -> RSSI voltage monitoring
 
- - :ref:`BATT_MONITOR<BATT_MONITOR>` 4
- - :ref:`BATT_VOLT_PIN<BATT_VOLT_PIN>` 10
- - :ref:`BATT_CURR_PIN<BATT_CURR_PIN>` 11
- - :ref:`BATT_VOLT_MULT<BATT_VOLT_MULT>` 10.1
- - :ref:`BATT_AMP_PERVLT<BATT_AMP_PERVLT>` varies depending on external current sensor
+Build the FC
+==================
 
-Compass
-=======
+./waf configure --board=YJUAV_A6SE
 
-The KakuteH7 V2 does not have a built-in compass, however you can attach an external compass using I2C on the SDA and SCL pads.
+./waf copter
 
-Firmware
-========
-
-Firmware for this board can be found `here <https://firmware.ardupilot.org>`_ in  sub-folders labeled "KakuteH7v2".
+The compiled firmware is located in folder **"build/YJUAV_A6SE/bin/arducopter.apj"**.
 
 Loading Firmware
-================
+==================
 
-Initial firmware load can be done with DFU by plugging in USB with the
-bootloader button pressed. Then you should load the "with_bl.hex"
-firmware, using your favourite DFU loading tool.
-
-Once the initial firmware is loaded you can update the firmware using
-any ArduPilot ground station software. Later updates should be done with the
-\*.apj firmware files.
+The A6SE flight controller comes pre-installed with an ArduPilot compatible bootloader, allowing the loading of *.apj firmware files with any ArduPilot compatible ground station.
 
 [copywiki destination="plane,copter,rover,blimp"]
