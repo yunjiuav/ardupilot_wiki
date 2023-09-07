@@ -15,6 +15,7 @@ Overview
     :width: 50%
 
 The A6SE is a high-performance and cost-effective flight control product, with a small size, light weight, and easy installation.
+
 The A6SE flight controller is manufactured and sold by `YJUAV <http://www.yjuav.net>`__.
 
 Where to Buy
