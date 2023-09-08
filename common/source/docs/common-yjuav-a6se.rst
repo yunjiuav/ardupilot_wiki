@@ -1,22 +1,18 @@
 .. _common-yjuav-a6se:
 
 ====================
-YJUAV A6SE
+YJUAV A6SE High Performance Mini Flight Control
 ====================
 
 Overview
 ==============
-.. image:: ../../../images/yjuav-autopilot/a6se/a6se_1.jpg
-    :target: ../_images/yjuav-autopilot/a6se/a6se_1.jpg
-    :width: 50%
-
-.. image:: ../../../images/yjuav-autopilot/a6se/a6se_2.jpg
-    :target: ../_images/yjuav-autopilot/a6se/a6se_2.jpg
-    :width: 50%
-
 The A6SE is a high-performance and cost-effective flight control product, with a small size, light weight, and easy installation.
 
 The A6SE flight controller is manufactured and sold by `YJUAV <http://www.yjuav.net>`__.
+
+.. image:: ../../../images/yjuav-autopilot/a6se/a6se_2.jpg
+    :target: ../_images/yjuav-autopilot/a6se/a6se_2.jpg
+    :width: 100%
 
 Where to Buy
 ============
@@ -36,7 +32,8 @@ Specifications
 
 -  **Sensors**
 
-   -  Two InvenSense ICM42688 accelerometer / gyroscope
+   -  InvenSense ICM42688 accelerometer / gyroscope
+   -  InvenSense ICM42688 accelerometer / gyroscope
    -  DPS310 barometer
    -  IST8310 magnetometer
 
@@ -49,10 +46,11 @@ Specifications
 -  **Interfaces**
 
    -  11x PWM servo outputs
+   -  5x ADC pins
    -  5x Uart ports
    -  3x I2C ports
    -  2x CAN ports
-   -  1x ADC port
+   -  1x SPI port
    -  1x microSD port
    -  1x TypeC USB port
    -  1x Analog battery monitor port
@@ -60,8 +58,9 @@ Specifications
 
 -  **Other**
 
-   -  Weight 38g
-   -  Size 58mm x 38mm x 16.8mm
+   -  Weight 40g
+   -  Size 58mm x 38mm x 16mm
+   -  Operating temperature -20 ~ 85°c
 
 Pinout
 ======
@@ -225,7 +224,7 @@ RC Input
 
 The remote control signal should be connected to the “RC IN” pin, at one side of the servo channels.
 
-This signal pin supports two types of remote control signal inputs, SBUS PPM and DSM signals.
+This signal pin supports three types of remote control signal inputs, SBUS PPM and DSM signals.
 
 
 PWM Output
