@@ -1,7 +1,7 @@
 .. _common-yjuav-a6se:
 
 ====================
-YJUAV A6SE High Performance Mini Flight Control
+YJUAV A6SE High Performance Mini Flight Controller
 ====================
 
 Overview
@@ -10,8 +10,8 @@ The A6SE is a high-performance and cost-effective flight control product, with a
 
 The A6SE flight controller is manufactured and sold by `YJUAV <http://www.yjuav.net>`__.
 
-.. image:: ../../../images/yjuav-autopilot/a6se/a6se_2.jpg
-    :target: ../_images/yjuav-autopilot/a6se/a6se_2.jpg
+.. image:: ../../../images/yjuav/autopilot/a6se/a6se_1.jpg
+    :target: ../_images/yjuav/autopilot/a6se/a6se_1.jpg
     :width: 100%
 
 Where to Buy
@@ -65,8 +65,8 @@ Specifications
 Pinout
 ======
 
-.. image:: ../../../images/yjuav-autopilot/a6se/a6se_3.jpg
-    :target: ../_images/yjuav-autopilot/a6se/a6se_3.jpg
+.. image:: ../../../images/yjuav/autopilot/a6se/a6se_2.jpg
+    :target: ../_images/yjuav/autopilot/a6se/a6se_2.jpg
 
 POWER ADC
 ----------
