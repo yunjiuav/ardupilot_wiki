@@ -53,8 +53,11 @@ Specifications
    -  1x SPI port
    -  1x microSD port
    -  1x TypeC USB port
+   -  1x JST_GH1.25 USB port
    -  1x Analog battery monitor port
    -  1x RC port (suport sbus, ppm and dsm)
+   -  1x Safety switch and Beep port
+   -  1x S.Bus servo output
 
 -  **Other**
 
